@@ -1,0 +1,14 @@
+[
+  {
+    "text": "clean fridge",
+    "completed": false
+  },
+  {
+    "text": "do laundry",
+    "completed": false
+  },
+  {
+    "text": "code app",
+    "completed": false
+  }
+]
