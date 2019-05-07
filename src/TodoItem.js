@@ -17,11 +17,12 @@ const pending = {
   textDecoration: "none"
 };
 
-export const TodoItem = ({ todo, idx, completeTodo }) => (
-  <ThemeProvider theme={todo.completed ? done : pending}>
+export const TodoItem = ({ todoItem, idx, completeTodo, removeTodo }) => (
+  <ThemeProvider theme={todoItem.completed ? done : pending}>
     <StyledTodoItem className="todo-item">
-      {idx} {todo.text}
-      <button onClick={completeTodo}>done</button>
+      {idx + 1}. {todoItem.text}
+      <button onClick={() => completeTodo(idx)}>done</button>
+      <button onClick={() => removeTodo(idx)}>X</button>
     </StyledTodoItem>
   </ThemeProvider>
 );

@@ -21,12 +21,27 @@ export const TodoListContainer = () => {
     const newTodos = [...todos, { text }];
     setTodos(newTodos);
   };
+  const completeTodo = idx => {
+    const newTodos = [...todos];
+    newTodos[idx].completed = true;
+    setTodos(newTodos);
+  };
+  const removeTodo = idx => {
+    const newTodos = [...todos];
+    newTodos.splice(idx, 1);
+    setTodos(newTodos);
+  };
 
-  //   const completeTodo =
   return (
     <StyledListContainer className="todo-list-container">
       {todos.map((item, idx) => (
-        <TodoItem key={idx} idx={idx + 1} todo={item} />
+        <TodoItem
+          key={idx}
+          idx={idx}
+          todoItem={item}
+          completeTodo={completeTodo}
+          removeTodo={removeTodo}
+        />
       ))}
       <TodoForm addTodo={addTodo} />
     </StyledListContainer>
