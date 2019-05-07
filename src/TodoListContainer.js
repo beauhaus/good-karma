@@ -18,9 +18,11 @@ export const TodoListContainer = () => {
   const [todos, setTodos] = useState(todosData);
 
   const addTodo = text => {
-    const newTodos = [...todosData, { text }];
+    const newTodos = [...todos, { text }];
     setTodos(newTodos);
   };
+
+  //   const completeTodo =
   return (
     <StyledListContainer className="todo-list-container">
       {todos.map((item, idx) => (
