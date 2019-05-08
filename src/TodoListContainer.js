@@ -5,13 +5,11 @@ import styled from "styled-components";
 import TodoForm from "./TodoForm";
 
 const StyledListContainer = styled.div`
-  /* background-color: radial-gradient(45deg, grey 0%, darkgrey 100%); */
   grid-column: 2;
   height: 90vh;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(8, 5vh);
-  font-size: 2rem;
+  grid-template-rows: repeat(8, 8vh);
 `;
 
 export const TodoListContainer = () => {

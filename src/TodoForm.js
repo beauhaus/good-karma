@@ -12,15 +12,25 @@ const StyledForm = styled.form`
   & > input {
     margin: 0;
     grid-column: 1/-1;
+    background: transparent;
   }
-  & > button {
-    background: #ff9756;
+
+  & > button.add-button {
+    /* background: #ff9756; */
+    background: rgba(145, 184, 172, 0.5);
+    background: red;
+    color: whitesmoke;
+    /* font-size: 4rem; */
+    font-weight: 100;
+    /* width: 5rem; */
     grid-column: -1;
-    border: 1px solid #c47d52;
+    /* border: 1px solid #c47d52; */
+    /* border-radius: 50%; */
+    /* margin: 0.2rem; */
   }
   & > input:placeholder-shown {
     color: red;
-    font-family: "Lato", "Trebuchet MS", sans-serif;
+    font-family: "Montserrat", "Trebuchet MS", sans-serif;
     font-size: 1.3rem;
   }
 `;
@@ -42,7 +52,9 @@ export const TodoForm = ({ addTodo }) => {
         onChange={e => setValue(e.target.value)}
         onBlur={e => setValue(e.target.value)}
       />
-      <button type="submit">+</button>
+      <button className="add-button" type="submit">
+        +
+      </button>
     </StyledForm>
   );
 };
