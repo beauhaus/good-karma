@@ -9,7 +9,9 @@ const StyledListContainer = styled.div`
   height: 90vh;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(8, 8vh);
+  grid-template-rows: 10vh 10vh;
+  grid-auto-rows: 10vh;
+  border: 1px solid fuchsia;
 `;
 
 export const TodoListContainer = () => {

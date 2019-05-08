@@ -18,7 +18,7 @@ const StyledApp = styled.div`
   text-align: center;
   display: grid;
   grid-template-columns: 2vw 1fr 2vw;
-  grid-template-rows: repeat(20, 10vh); /* TODO: refactor this*/
+  /* grid-template-rows: repeat(20, 10vh); TODO: refactor this */
   h1 {
     font-family: "Faster One", Geneva, Verdana, sans-serif;
     font-size: 4rem;
