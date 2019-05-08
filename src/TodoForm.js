@@ -2,38 +2,68 @@ import React, { useState } from "react";
 import styled from "styled-components";
 
 const StyledForm = styled.form`
+  background: rgba(145, 184, 172, 0.5);
   margin: 0.2rem;
-  padding: 0.2rem;
-  background: #ffddb2;
   grid-column: 1;
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  border-width: 0px;
-  & > input {
-    margin: 0;
-    grid-column: 1/-1;
-    background: transparent;
-  }
-
-  & > button.add-button {
-    /* background: #ff9756; */
-    background: rgba(145, 184, 172, 0.5);
-    background: red;
-    color: whitesmoke;
-    /* font-size: 4rem; */
-    font-weight: 100;
-    /* width: 5rem; */
-    grid-column: -1;
-    /* border: 1px solid #c47d52; */
-    /* border-radius: 50%; */
-    /* margin: 0.2rem; */
-  }
-  & > input:placeholder-shown {
-    color: red;
-    font-family: "Montserrat", "Trebuchet MS", sans-serif;
-    font-size: 1.3rem;
+  grid-template-columns: 1fr;
+  & .input-details {
+    grid-column: 1;
+    width: 99%;
+    margin: auto;
+    grid-template-columns: 1fr 1vh 9vh;
+    height: 8vh;
+    display: grid;
+    & > input {
+      font-size: 2.5rem;
+      grid-column: 1;
+      background: #879692;
+      border: 1px solid transparent;
+      box-shadow: inset 2px 2px 10px 0px rgba(0, 0, 0, 0.5);
+      padding: 2%;
+      min-height: 8vh;
+      &[type="text"] {
+        color: #fafad2;
+      }
+      &::placeholder,
+      &:placeholder-shown {
+        font-style: italic;
+        color: #fafad2;
+        font-family: "Montserrat", "Trebuchet MS", sans-serif;
+        font-weight: 200;
+        letter-spacing: 0.2rem;
+        font-size: 2.3rem;
+      }
+    }
+    & > button.add-button {
+      background: #ff9756;
+      grid-column: 3;
+      cursor: pointer;
+      max-height: 8vh;
+      position: relative;
+      p {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: auto;
+        font-family: "Montserrat", "Trebuchet MS", sans-serif;
+        font-weight: 100;
+        font-size: 8rem;
+        color: whitesmoke;
+      }
+    }
   }
 `;
+
+// .parent {
+//   position: relative;
+// }
+// .child {
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+
 export const TodoForm = ({ addTodo }) => {
   const [value, setValue] = useState("");
   const handleSubmit = e => {
@@ -44,17 +74,19 @@ export const TodoForm = ({ addTodo }) => {
   };
   return (
     <StyledForm className="todo-form" onSubmit={handleSubmit}>
-      <input
-        type="text"
-        className="form-input"
-        value={value}
-        placeholder="add todo..."
-        onChange={e => setValue(e.target.value)}
-        onBlur={e => setValue(e.target.value)}
-      />
-      <button className="add-button" type="submit">
-        +
-      </button>
+      <div className="input-details">
+        <input
+          type="text"
+          className="form-input"
+          value={value}
+          placeholder="add todo..."
+          onChange={e => setValue(e.target.value)}
+          onBlur={e => setValue(e.target.value)}
+        />
+        <button className="add-button" type="submit">
+          <p>+</p>
+        </button>
+      </div>
     </StyledForm>
   );
 };

@@ -11,7 +11,6 @@ const StyledListContainer = styled.div`
   grid-template-columns: 1fr;
   grid-template-rows: 10vh 10vh;
   grid-auto-rows: 10vh;
-  border: 1px solid fuchsia;
 `;
 
 export const TodoListContainer = () => {

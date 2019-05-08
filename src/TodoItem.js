@@ -7,10 +7,9 @@ const StyledTodoItem = styled.div`
   background: rgba(145, 184, 172, 0.5);
   text-align: left;
   grid-column: 1;
-  border: 1px solid yellow;
+  /* border: 1px solid yellow; */
   display: grid;
   grid-template-columns: 6fr 1fr 1fr;
-  /* grid-template-rows: 1fr; */
   justify-content: space-between;
   text-align: left;
   grid-auto-flow: row;
@@ -22,34 +21,51 @@ const StyledTodoItem = styled.div`
     color: whitesmoke;
     font-size: 2.5rem;
     grid-column: 1/-3;
-    border: 1px solid red;
     margin: auto 1vw;
   }
   & button {
+    grid-row: 1;
+    cursor: pointer;
     max-height: 90%;
     width: 8vh;
     display: grid;
     font-size: 2rem;
-    grid-row: 1;
     p {
       margin: auto;
+      font-family: "Montserrat", "Trebuchet MS", sans-serif;
+      font-size: 2.5rem;
     }
-    /* display: none; */
   }
   & button.remove-btn {
-    /* display: grid; */
     grid-column: -1;
     background: rgba(209, 148, 148, 0.5);
+    border: 1px solid #d11a13;
+    position: relative;
     p {
-      color: #d19494;
-      margin: auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: sans-serif;
+      font-weight: 100;
+      font-size: 3rem;
+      color: #d11a13;
     }
   }
   & button.done-btn {
     margin-right: 1vw;
     grid-column: -2;
     background: rgba(147, 209, 168, 0.2);
+    border: 1px solid #93d1a8;
+    position: relative;
     p {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: sans-serif;
+      font-weight: 100;
+      font-size: 3rem;
       color: #93d1a8;
     }
   }
