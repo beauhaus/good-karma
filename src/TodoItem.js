@@ -33,22 +33,17 @@ const StyledTodoItem = styled.div`
     p {
       margin: auto;
       font-family: "Montserrat", "Trebuchet MS", sans-serif;
-      font-size: 2.5rem;
+      font-size: 2.7rem;
     }
   }
   & button.remove-btn {
     grid-column: -1;
     background: rgba(209, 148, 148, 0.5);
     border: 1px solid #d11a13;
-    position: relative;
+
     p {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
       font-family: sans-serif;
       font-weight: 100;
-      font-size: 3rem;
       color: #d11a13;
     }
   }
@@ -57,15 +52,9 @@ const StyledTodoItem = styled.div`
     grid-column: -2;
     background: rgba(147, 209, 168, 0.2);
     border: 1px solid #93d1a8;
-    position: relative;
     p {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
       font-family: sans-serif;
       font-weight: 100;
-      font-size: 3rem;
       color: #93d1a8;
     }
   }

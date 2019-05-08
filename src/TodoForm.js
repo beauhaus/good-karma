@@ -42,14 +42,10 @@ const StyledForm = styled.form`
       max-height: 8vh;
       position: relative;
       p {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
         margin: auto;
         font-family: "Montserrat", "Trebuchet MS", sans-serif;
         font-weight: 100;
-        font-size: 8rem;
+        font-size: 7rem;
         color: whitesmoke;
       }
     }
