@@ -15,7 +15,7 @@ dead-simple React16.8.x todo app using hooks
 
 
 
-## Pass props thru link
+## Responsiveness using CSS Grid
 ![Early version working on phones and tablets without break-points](https://github.com/beauhaus/react-hooks-todo-app/blob/master/readmeRefImg/goodKarmaSrn1.jpg?raw=true "without breakpoints")
 
 
