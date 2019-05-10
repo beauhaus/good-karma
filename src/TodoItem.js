@@ -2,26 +2,23 @@ import React from "react";
 import styled, { ThemeProvider } from "styled-components";
 
 const StyledTodoItem = styled.div`
-  margin: 0.2rem;
   padding: auto;
-  background: rgba(145, 184, 172, 0.5);
-  text-align: left;
-  grid-column: 1;
-  /* border: 1px solid yellow; */
-  display: grid;
-  grid-template-columns: 6fr 1fr 1fr;
-  justify-content: space-between;
   text-align: left;
   grid-auto-flow: row;
   padding-right: 1%;
   padding-top: 1%;
 
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  animation: slider 1.2s cubic-bezier(0.07, 1.49, 0.19, 1.42) forwards;
+
   h2 {
     text-decoration: ${({ theme }) => theme.textDecoration};
     color: whitesmoke;
+    font-weight: 200;
     font-size: 2.5rem;
-    grid-column: 1/-3;
-    margin: auto 1vw;
+    grid-column: 1;
+    margin: auto 0 auto 1vw;
   }
   & button {
     grid-row: 1;
@@ -36,14 +33,16 @@ const StyledTodoItem = styled.div`
       font-size: 2.7rem;
     }
   }
+  & div.btn-container {
+    grid-column: -1;
+    display: grid;
+  }
   & button.remove-btn {
     grid-column: -1;
     background: rgba(209, 148, 148, 0.5);
     border: 1px solid #d11a13;
 
     p {
-      font-family: sans-serif;
-      font-weight: 100;
       color: #d11a13;
     }
   }
@@ -53,8 +52,6 @@ const StyledTodoItem = styled.div`
     background: rgba(147, 209, 168, 0.2);
     border: 1px solid #93d1a8;
     p {
-      font-family: sans-serif;
-      font-weight: 100;
       color: #93d1a8;
     }
   }
@@ -73,12 +70,14 @@ export const TodoItem = ({ todoItem, idx, completeTodo, removeTodo }) => (
       <h2>
         {idx + 1}. {todoItem.text}
       </h2>
-      <button className="remove-btn" onClick={() => removeTodo(idx)}>
-        <p>X</p>
-      </button>
-      <button className="done-btn" onClick={() => completeTodo(idx)}>
-        <p>√</p>
-      </button>
+      <div className="btn-container">
+        <button className="remove-btn" onClick={() => removeTodo(idx)}>
+          <p> &#88;</p>
+        </button>
+        <button className="done-btn flash" onClick={() => completeTodo(idx)}>
+          <p>&#10003;</p>
+        </button>
+      </div>
     </StyledTodoItem>
   </ThemeProvider>
 );

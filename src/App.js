@@ -2,6 +2,7 @@ import React from "react";
 import { render } from "react-dom";
 import { TodoListContainer } from "./TodoListContainer";
 import styled, { createGlobalStyle } from "styled-components";
+import "normalize.css/normalize.css";
 
 const GlobalStyles = createGlobalStyle`
   * {
@@ -14,6 +15,10 @@ const GlobalStyles = createGlobalStyle`
   body {
     margin: 0;
     font-size: 1.6rem;
+    width: 100vw;
+    max-height: 100vh;
+    max-width: 100vw;
+    text-align: center;
   }
 `;
 
@@ -22,19 +27,11 @@ const StyledApp = styled.div`
   font-family: "Montserrat", "Trebuchet MS", sans-serif;
   font-weight: 200;
   background: linear-gradient(360deg, #060d0b 0%, #81a69b 100%);
+  display: grid;
+  grid-template-columns: 1fr 95vw 1fr;
+  grid-template-rows: 14vh repeat(9, 10vh);
   width: 100vw;
   height: 100vh;
-  text-align: center;
-  display: grid;
-  grid-template-columns: 2vw 1fr 2vw;
-  h1 {
-    font-family: "Faster One", Geneva, Verdana, sans-serif;
-    font-size: 4rem;
-    grid-column: 1/-1;
-    grid-row: 1;
-    margin-top: 1rem;
-    text-shadow: 2px 2px 10px #fafad2;
-  }
   button {
     box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.5);
     position: relative;
@@ -45,14 +42,12 @@ const StyledApp = styled.div`
       transform: translate(-50%, -50%);
     }
   }
-  /* border: 1px dashed fuchsia; */
 `;
 
 const App = () => {
   return (
     <StyledApp className="app-wrapper">
       <GlobalStyles />
-      <h1>Good Karma</h1>
       <TodoListContainer />
     </StyledApp>
   );
