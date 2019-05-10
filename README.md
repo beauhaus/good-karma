@@ -1,8 +1,11 @@
-# react-hooks-todo-app
-dead-simple React16.8.x todo app using hooks
+# Good Karma: *A React to-do App using Hooks*
+Basic React16.8.x todo app using hooks
+
 No Media queries! (responsive–even in landscape modes)
-Looks sharp on Chrome, Safari & Mozilla
+
 No css file! (using createGlobalStyle from Styled-Components API)
+
+Looks sharp on Chrome, Safari & Mozilla
 
 ## Feature-set
 
@@ -16,9 +19,7 @@ No css file! (using createGlobalStyle from Styled-Components API)
 
 *(prettier, eslint-recommended, jsx-a11y plugin)*
 
-
-
-## Responsiveness using CSS Grid and no media queries
+## Media queryless responsiveness
 ![Early version working on phones and tablets without break-points](https://github.com/beauhaus/react-hooks-todo-app/blob/master/readmeRefImg/goodKarmaSrn1.jpg?raw=true "without breakpoints")
 
 ## styles.css is removed entirely using styled-components 
@@ -42,3 +43,15 @@ const GlobalStyles = createGlobalStyle`
   }
 `;
 ```
+
+### Attribution
+
+Andrew Faulkner's interesting codepen was the inspiration behind the hover buttons
+https://codepen.io/andrewfaulkner/pen/tcvJz
+
+Traversy Media's basic intro to hooks inspired the structure of the code.
+https://www.youtube.com/watch?v=mxK8b99iJTg
+
+
+Max Stoiber, co-creator of styled-components, is super-human & a nice person.
+https://mxstbr.com/
