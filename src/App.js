@@ -13,10 +13,8 @@ const GlobalStyles = createGlobalStyle`
   }
   body {
     margin: 0;
-    font-size: 1.6rem;  
-    border: 2px solid yellow;
+    font-size: 1.6rem;
   }
-
 `;
 
 const StyledApp = styled.div`
@@ -47,17 +45,15 @@ const StyledApp = styled.div`
       transform: translate(-50%, -50%);
     }
   }
-  border: 1px dashed fuchsia;
+  /* border: 1px dashed fuchsia; */
 `;
 
 const App = () => {
   return (
     <StyledApp className="app-wrapper">
-      <React.Fragment>
-        <GlobalStyles />
-        <h1>Good Karma</h1>
-        <TodoListContainer />
-      </React.Fragment>
+      <GlobalStyles />
+      <h1>Good Karma</h1>
+      <TodoListContainer />
     </StyledApp>
   );
 };

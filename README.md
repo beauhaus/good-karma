@@ -15,7 +15,28 @@ dead-simple React16.8.x todo app using hooks
 
 
 
-## Responsiveness using CSS Grid
+## Responsiveness using CSS Grid and no media queries
 ![Early version working on phones and tablets without break-points](https://github.com/beauhaus/react-hooks-todo-app/blob/master/readmeRefImg/goodKarmaSrn1.jpg?raw=true "without breakpoints")
 
+## styles.css is removed entirely using styled-components 
+https://www.styled-components.com/docs/api#createglobalstyle
+
+```(javascript)
+
+import styled, { createGlobalStyle } from "styled-components";
+
+const GlobalStyles = createGlobalStyle`
+  * {
+    box-sizing: border-box;
+    color: #333;
+  }
+  html {
+    font-size: 62.5%;
+  }
+  body {
+    margin: 0;
+    font-size: 1.6rem;  
+  }
+`;
+```
 
