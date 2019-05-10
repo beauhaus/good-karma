@@ -1,7 +1,23 @@
 import React from "react";
 import { render } from "react-dom";
 import { TodoListContainer } from "./TodoListContainer";
-import styled from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
+
+const GlobalStyles = createGlobalStyle`
+  * {
+    box-sizing: border-box;
+    color: #333;
+  }
+  html {
+    font-size: 62.5%;
+  }
+  body {
+    margin: 0;
+    font-size: 1.6rem;  
+    border: 2px solid yellow;
+  }
+
+`;
 
 const StyledApp = styled.div`
   @import url("https://fonts.googleapis.com/css?family=Faster+One|Montserrat:100,200,300,400");
@@ -31,13 +47,17 @@ const StyledApp = styled.div`
       transform: translate(-50%, -50%);
     }
   }
+  border: 1px dashed fuchsia;
 `;
 
 const App = () => {
   return (
     <StyledApp className="app-wrapper">
-      <h1>Good Karma</h1>
-      <TodoListContainer />
+      <React.Fragment>
+        <GlobalStyles />
+        <h1>Good Karma</h1>
+        <TodoListContainer />
+      </React.Fragment>
     </StyledApp>
   );
 };
