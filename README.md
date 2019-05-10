@@ -1,17 +1,20 @@
 # react-hooks-todo-app
 dead-simple React16.8.x todo app using hooks
-
+No Media queries! (responsive–even in landscape modes)
+Looks sharp on Chrome, Safari & Mozilla
+No css file! (using createGlobalStyle from Styled-Components API)
 
 ## Feature-set
 
-| <h3>Feature</h3>      | <h3>Notes</h3>                        | <h3>Status</h3> |
-| :-------------------- | :------------------------------------ | :-------------- |
-| **React**             | 16.8.6                                | ***√***         |
-| **Styled-Components** | uses <ThemeProvider>                  | ***√***         |
-| **Parcel**            | 1.12.3                                | ***√***         |
-| **CSS-Grid**          | (fully responsive w/o media queries ) | ***√***         |
+| <h3>Feature</h3>      | <h3>Notes</h3>                         | <h3>Status</h3> |
+| :-------------------- | :------------------------------------- | :-------------- |
+| **React**             | 16.8.6                                 | ***√***         |
+| **Styled-Components** | uses <ThemeProvider>                   | ***√***         |
+| **Parcel**            | 1.12.3                                 | ***√***         |
+| **CSS-Grid**          | (fully responsive w/o media queries )  | ***√***         |
+| **CSS-Animations**    | cubic-bezier animation timing function | ***√***         |
 
-(prettier, eslint-recommended, jsx-a11y plugin)
+*(prettier, eslint-recommended, jsx-a11y plugin)*
 
 
 
@@ -39,4 +42,3 @@ const GlobalStyles = createGlobalStyle`
   }
 `;
 ```
-
