@@ -1,5 +1,5 @@
 {
-  "name": "beau-jackson-simple-react-todo-app",
+  "name": "beau_jackson",
   "version": "1.0.0",
   "description": "react 16.8.4 TODO app using hooks",
   "main": "index.js",
@@ -27,13 +27,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/beauhaus/react-hooks-todo-app.git"
+    "url": "https://github.com/beauhaus/good-karma"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/beauhaus/react-hooks-todo-app/issues"
+    "url": "https://github.com/beauhaus/good-karma/issues"
   },
-  "homepage": "https://github.com/beauhaus/react-hooks-todo-app#readme"
+  "homepage": "https://github.com/beauhaus/good-karma#readme"
 }
