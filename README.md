@@ -52,6 +52,8 @@ https://codepen.io/andrewfaulkner/pen/tcvJz
 Traversy Media's basic intro to hooks inspired the structure of the code.
 https://www.youtube.com/watch?v=mxK8b99iJTg
 
-
 Max Stoiber, co-creator of styled-components, is super-human & a nice person.
 https://mxstbr.com/
+
+Andy Bell was the inspiration behind the layout idea and I'm very grateful.
+https://twitter.com/andybelldesign
