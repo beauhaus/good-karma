@@ -63,17 +63,27 @@ const StyledListContainer = styled.div`
   /* SLIDER ANIMATION */
   @-webkit-keyframes slider {
     0% {
+      opacity: 0;
       transform: translateX(150vw);
     }
+    50% {
+      /* opacity: 0.2; */
+    }
     100% {
+      opacity: 1;
       transform: translateX(0);
     }
   }
   @keyframes slider {
     0% {
+      opacity: 0;
       transform: translateX(150vw);
     }
+    50% {
+      /* opacity: 0.2; */
+    }
     100% {
+      opacity: 1;
       transform: translateX(0);
     }
   }

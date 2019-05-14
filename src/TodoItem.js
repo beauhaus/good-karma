@@ -2,6 +2,7 @@ import React from "react";
 import styled, { ThemeProvider } from "styled-components";
 
 const StyledTodoItem = styled.div`
+  opacity: 0;
   padding: auto;
   text-align: left;
   grid-auto-flow: row;
@@ -10,7 +11,7 @@ const StyledTodoItem = styled.div`
 
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
-  animation: slider 1.2s cubic-bezier(0.07, 1.49, 0.19, 1.42) forwards;
+  animation: slider 0.5s cubic-bezier(0.07, 1.49, 0.19, 1.42) forwards;
 
   h2 {
     text-decoration: ${({ theme }) => theme.textDecoration};
